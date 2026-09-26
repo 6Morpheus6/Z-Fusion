@@ -47,6 +47,7 @@ module.exports = {
       params: {
         venv_python: "3.11",
         venv: "env",
+        path: "app",
         message: [
           "uv pip install ./wheel/stringzilla-5.1.2-cp311-cp311-win_amd64.whl transparent-background",
         ]
@@ -58,6 +59,7 @@ module.exports = {
       params: {
         venv_python: "3.11",
         venv: "env",
+        path: "app",
         message: [
           "uv pip install transparent-background",
         ]
