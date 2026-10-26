@@ -9,7 +9,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git -C comfyui pull || git clone https://github.com/comfyanonymous/ComfyUI.git comfyui",
+          "git -C comfyui checkout master && git -C comfyui pull || git clone https://github.com/comfyanonymous/ComfyUI.git comfyui",
           "git -C comfyui/custom_nodes/ComfyUI-Manager pull || git clone https://github.com/ltdrdata/ComfyUI-Manager.git comfyui/custom_nodes/ComfyUI-Manager",
           "git -C comfyui/custom_nodes/ComfyUI-GGUF pull || git clone https://github.com/city96/ComfyUI-GGUF.git comfyui/custom_nodes/ComfyUI-GGUF",
           "git -C comfyui/custom_nodes/ComfyUI-SeedVR2_VideoUpscaler pull || git clone https://github.com/SeedVR2/ComfyUI-SeedVR2_VideoUpscaler.git comfyui/custom_nodes/ComfyUI-SeedVR2_VideoUpscaler",
