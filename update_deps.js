@@ -42,11 +42,18 @@ module.exports = {
       }
     },
     {
+      when: "{{exists('app/env')}}",
+      method: "fs.rm",
+      params: {
+        path: "app/env"
+      }
+    },
+    {
       when: "{{platform === 'win32'}}",
       method: "shell.run",
       params: {
         venv_python: "3.11",
-        venv: "env",
+        venv: "venv",
         path: "app",
         message: [
           "uv pip install ./wheel/stringzilla-5.1.2-cp311-cp311-win_amd64.whl transparent-background",
@@ -58,7 +65,7 @@ module.exports = {
       method: "shell.run",
       params: {
         venv_python: "3.11",
-        venv: "env",
+        venv: "venv",
         path: "app",
         message: [
           "uv pip install transparent-background",
@@ -68,7 +75,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        venv: "env",
+        venv: "venv",
         path: "app",
         message: [
           "uv pip install -r comfyui/requirements.txt",
@@ -85,7 +92,7 @@ module.exports = {
       params: {
         uri: "torch.js",
         params: {
-          venv: "env",
+          venv: "venv",
           path: "app"
         }
       }
